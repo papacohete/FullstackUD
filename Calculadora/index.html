@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+</br>
+<input id="Num1"> Inserte numero 1</input>
+</br>
+</br>
+<input id="Num2"> Inserte numero 2</input>
+</br>
+</br>
+<button id="suma" onclick="suma()">Sumar</button>
+<button id="resta" onclick="resta()">Restar</button>
+<button id="multiplicar" onclick="multiplicar()">Multiplicar</button>
+</br>
+</br>
+<h1>Resultado: </h1><input id="resultado"></input>
+
+<script>
+console.log("Ejecutando calculadora")
+
+// const ValorA = document.getElementById("Num1").value 
+// console.log("numero A",ValorA)
+
+
+function suma() {
+
+    console.log("Ejecutando función Suma")
+    const ValorA = document.getElementById("Num1").value;
+    const ValorB = document.getElementById("Num2").value;
+    let campoResultado = document.getElementById("resultado");
+    
+    if(!ValorA || !ValorB)
+    {
+        alert("Ingrese datos validos")
+    }
+    
+    else{
+        const Resultado = Number(ValorA) + Number(ValorB);
+        console.log("Resultado=",Resultado)
+        campoResultado.value = Resultado
+    }
+   
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>
