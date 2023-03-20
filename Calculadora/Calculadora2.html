@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>CALCULADORA</H1>
+</br>
+</br>
+ <input id="NumA">  Inserte digito</input>
+</br>
+</br>
+ <input id="NumB">  Inserte digito</input>
+</br>
+</br>
+<button id="suma" onclick="calculadora(this.id)">Sumar</button>
+<button id="resta" onclick="calculadora(this.id)">Restar</button>
+<button id="producto" onclick="calculadora(this.id)">Multiplicar</button>
+<button id="division" onclick="calculadora(this.id)">Dividir</button>
+</br>
+</br>
+<H2>RESULTADO: </H2>
+<input id="Resultado" type="number"></input>
+ 
+ <script>
+function calculadora(id){
+    const ValorA= document.getElementById("NumA").value
+    const ValorB= document.getElementById("NumB").value
+    const CampoResultado = document.getElementById("Resultado")
+    var Resultado 
+if(!ValorA || !ValorB){
+    alert("Ingresar datos validos")
+}
+else{
+    switch(id){
+        case "suma":
+            console.log("Ejecutando Case SUMA") 
+            Resultado= Number(ValorA)+Number(ValorB)
+            CampoResultado.value=Resultado
+        break;
+
+        case "resta":
+            console.log("Ejecutando Case RESTA") 
+            Resultado= Number(ValorA)-Number(ValorB)
+            CampoResultado.value=Resultado
+        break;
+
+        case "producto":
+            console.log("Ejecutando Case PRODUCTO") 
+            Resultado= Number(ValorA)*Number(ValorB)
+            CampoResultado.value=Resultado
+        break;
+
+        case "division":
+            console.log("Ejecutando Case DIVISION") 
+            Resultado= Number(ValorA)/Number(ValorB)
+            CampoResultado.value=Resultado
+        break;
+
+        default: 
+         }
+    }
+}
+ </script>
+
+
+</body>
+</html>
